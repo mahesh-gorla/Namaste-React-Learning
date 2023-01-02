@@ -1,0 +1,19 @@
+{
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "Bundlers: Bundler make minify our code and makes it visble us to as a single line code and it does lot more things. some example bundlers are as below.",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mahesh-gorla/Namaste-React-Learning.git"
+  },
+  "author": "Mahesh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mahesh-gorla/Namaste-React-Learning/issues"
+  },
+  "homepage": "https://github.com/mahesh-gorla/Namaste-React-Learning#readme"
+}
