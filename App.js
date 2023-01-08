@@ -1,26 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const heading1 = React.createElement(
-  "h1",
-  {
-    id: "title",
-  },
-  "Heading 1 from Parcel"
+const data = api.getData(); // if anyone hacks this api and ir returns
+// some malware  code then JSX code sanitizes the code
+const Heading2 = () => (
+  <div>
+    {data}
+    {/* sanitization in JSX */}
+    <h1>Hello World2</h1>
+  </div>
 );
-const heading2 = React.createElement(
-  "h2",
-  {
-    id: "title",
-  },
-  "Heading 2"
-);
-const continer = React.createElement(
-  "div",
-  {
-    id: "continer",
-  },
-  [heading1, heading2]
-);
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(continer);
+//React components
+// - Funtional
+// - Class based
+
+const rootFromDom = ReactDOM.createRoot(document.getElementById("root"));
+rootFromDom.render(<Heading2 />);

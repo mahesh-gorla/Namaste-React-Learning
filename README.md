@@ -1,41 +1,41 @@
 # Namaste-React-Learning
 
-Bundlers:
-Bundler make minify our code and makes it visble us to as a single line code and it does lot more things. some example bundlers are as below.
+> > Bundlers:
+> > -Bundler make minify our code and makes it visble us to -as a single line code and it does lot more things. some -example bundlers are as below.
 
 VITE
 PARCEL
 WEBPACK
 
-Create-react-app uses webpack
+> Create-react-app uses webpack
 
-there is no official name for npm
+-there is no official name for npm
 
-~ Tild
-^ Carat
+> ~ Tild
+> ^ Carat
 
-tild vs carat
+> tild vs carat
 
-version: 1.2.3
-: major . minor . patch
+> version: 1.2.3
+> : major . minor . patch
 
-Tild will only increase the patch version
-Carat will increase the minor and patch version
+> Tild will only increase the patch version
+> Carat will increase the minor and patch version
 
-Important things about package.lock
+> Important things about package.lock
 
-never add it to gitignore
+> never add it to gitignore
 
-node_modules are the database to your npm
-node-modules are helper funtions or helper code
-Never touch node-modules
-Never touch Package-lock.json
-Add type="module" to script tag if you need to do import or export something
+> node_modules are the database to your npm
+> node-modules are helper funtions or helper code
+> Never touch node-modules
+> Never touch Package-lock.json
+> Add type="module" to script tag if you need to do import or export something
 
 ** PARCEL IS A BEAST **
 Parcel advantages as below:
 File watcher algoritham is always looks for if any file changes- which is writtern in C++
-HMR - hot module reloading
+HMR - hot module replacement
 Bundling
 Minifing the code: reduces the the sizes
 Cleaning the code by removeing the console.logs
@@ -57,3 +57,10 @@ we should put parcel-cache in gitignore
 
 Percel -> Percel dependecies are transitive dependecies
 ** PARCEL IS A BEAST **
+
+npm init
+
+npx = npm run
+x is execution
+
+npm start === npm run start
