@@ -9,6 +9,7 @@ import { About } from "./components/About";
 import Error from "./components/Error";
 import { Contact } from "./components/Contact";
 import { RestaurantMenu } from "./components/RestaurantMenu";
+import { Profile } from "./components/Profile";
 
 export const AppLayout = () => (
   <>
@@ -27,6 +28,12 @@ const appRouter = createBrowserRouter([
       {
         path: "/about",
         element: <About />,
+        children: [
+          {
+            path: "profile", //parentPath /{path}
+            element: <Profile />,
+          },
+        ],
       },
       {
         path: "/contact",

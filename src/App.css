@@ -104,3 +104,8 @@
 .no-resturents {
   text-align: center;
 }
+.menu {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
