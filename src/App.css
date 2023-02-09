@@ -4,12 +4,9 @@
   box-sizing: border-box;
 }
 .img-logo {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
 }
 .continer {
-  background-color: yellowgreen;
+  background-color: #d3ee9d;
   color: white;
   font-weight: bold;
   font-size: 16px;
@@ -55,7 +52,7 @@
 .card {
   width: 300px;
   height: 400px;
-  background-color: #f1f1f1;
+  background-color: #63cd3214;
   margin: 20px;
   padding: 20px;
   border-radius: 10px;
@@ -97,6 +94,12 @@
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+.shimmer-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 60px;
 }
 .no-resturents {
   text-align: center;

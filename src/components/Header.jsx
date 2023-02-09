@@ -1,6 +1,6 @@
 import { useState } from "react";
 import companyLogo from "../asserts/logo-img.png";
-
+import { Link } from "react-router-dom";
 const loggedInUser = () => {
   // API call to check authentication
   return false;
@@ -8,7 +8,7 @@ const loggedInUser = () => {
 
 const Title = () => (
   <a href="/">
-    <img className="img-logo" alt="logo" src={companyLogo} />
+    <h3 className="img-logo">Food Delivery</h3>
   </a>
 );
 
@@ -20,9 +20,15 @@ export const Header = () => {
       <Title />
       <div className="nav-items">
         <ul className="nav-list">
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+          <li>
+            <Link to="/contact">Contact</Link>
+          </li>
           <li>Cart</li>
         </ul>
         {isLoggedIn ? (
