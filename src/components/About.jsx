@@ -1,6 +1,5 @@
-import { Outlet } from "react-router-dom";
 import { Profile } from "./Profile";
-export function About() {
+function About() {
   return (
     <div>
       <h1>About us page</h1>
@@ -9,3 +8,4 @@ export function About() {
     </div>
   );
 }
+export default About;
