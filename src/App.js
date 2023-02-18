@@ -1,4 +1,4 @@
-import React from "react";
+import React, { lazy, useState, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import "./App.css";
 import { Header } from "./components/Header";
@@ -10,14 +10,20 @@ import Error from "./components/Error";
 import { Contact } from "./components/Contact";
 import { RestaurantMenu } from "./components/RestaurantMenu";
 import { Profile } from "./components/Profile";
+import { Shimmer } from "./components/Shimmer";
 
-export const AppLayout = () => (
-  <>
-    <Header />
-    <Outlet />
-    <Footer />
-  </>
-);
+const Instamart = lazy(() => import("./components/Instamart"));
+export const AppLayout = () => {
+  console.log(useState());
+  const [stateUp, setStateUp] = useState(false);
+  return (
+    <>
+      <Header />
+      <Outlet />
+      <Footer setStateUp={setStateUp} stateUp={stateUp} />
+    </>
+  );
+};
 
 const appRouter = createBrowserRouter([
   {
@@ -30,7 +36,7 @@ const appRouter = createBrowserRouter([
         element: <About />,
         children: [
           {
-            path: "profile", //parentPath /{path}
+            path: "profile", //about /{path}
             element: <Profile />,
           },
         ],
@@ -46,6 +52,14 @@ const appRouter = createBrowserRouter([
       {
         path: "/resturant/:id",
         element: <RestaurantMenu />,
+      },
+      {
+        path: "/instamart",
+        element: (
+          <Suspense fallback={<Shimmer />}>
+            <Instamart />
+          </Suspense>
+        ),
       },
     ],
   },

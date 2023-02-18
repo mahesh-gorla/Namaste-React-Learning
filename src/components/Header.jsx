@@ -1,6 +1,7 @@
 import { useState } from "react";
 import companyLogo from "../asserts/logo-img.png";
 import { Link } from "react-router-dom";
+import { useOnline } from "../utils/useOnline";
 const loggedInUser = () => {
   // API call to check authentication
   return false;
@@ -13,6 +14,7 @@ const Title = () => (
 );
 
 export const Header = () => {
+  const isOnline = useOnline();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
@@ -29,8 +31,12 @@ export const Header = () => {
           <li>
             <Link to="/contact">Contact</Link>
           </li>
+          <li>
+            <Link to="/instamart">Instamart</Link>
+          </li>
           <li>Cart</li>
         </ul>
+        <h1>{isOnline ? "✅ Online" : "🔴 Offline"}</h1>
         {isLoggedIn ? (
           <button onClick={() => setIsLoggedIn(false)}>Logout</button>
         ) : (
