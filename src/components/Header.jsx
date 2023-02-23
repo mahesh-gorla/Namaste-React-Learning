@@ -1,5 +1,4 @@
 import { useState } from "react";
-import companyLogo from "../asserts/logo-img.png";
 import { Link } from "react-router-dom";
 import { useOnline } from "../utils/useOnline";
 const loggedInUser = () => {
@@ -9,7 +8,7 @@ const loggedInUser = () => {
 
 const Title = () => (
   <a href="/">
-    <h3 className="img-logo">Food Delivery</h3>
+    <h3 className="h-32 p-2">Food Delivery</h3>
   </a>
 );
 
@@ -18,11 +17,11 @@ export const Header = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
-    <div className="header continer">
+    <div className="flex">
       <Title />
-      <div className="nav-items">
-        <ul className="nav-list">
-          <li>
+      <div className="flex justify-between bg-pink-100 shadow-red-800 shadow-md">
+        <ul className="flex flex-wrap list-none text-orange-500">
+          <li className="ml-2 text-orange-500	">
             <Link to="/">Home</Link>
           </li>
           <li>
